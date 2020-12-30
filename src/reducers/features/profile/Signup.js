@@ -21,21 +21,21 @@ function Signup() {
 
     if (isSignedUp) {
         return (
-          <Redirect to="/" />
+            <Redirect to="/" />
         )
-      }
+    }
 
     return (
         <div>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Field>
                     <label>First Name</label>
-                    <input name="firstname" type="text" ref={register({ required: true })} />
+                    <input name="firstName" type="text" ref={register({ required: true })} />
                     {errors.firstname && 'First name is required.'}
                 </Form.Field>
                 <Form.Field>
                     <label>Last Name</label>
-                    <input name="lastname" type="text" ref={register({ required: true })} />
+                    <input name="lastName" type="text" ref={register({ required: true })} />
                     {errors.lastname && 'Last name is required.'}
                 </Form.Field>
                 <Form.Field>
